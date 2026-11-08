@@ -1,9 +1,8 @@
 function! qf_tools#toggle() abort
-  let l:win = filter(range(1, winnr('$')), 'getwinvar(v:val, "&buftype") ==# "quickfix"')
-  if empty(l:win)
-    copen
-  else
+  if getqflist({'winid': 0}).winid
     cclose
+  else
+    copen
   endif
 endfunction
 
