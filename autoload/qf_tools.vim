@@ -40,9 +40,6 @@ endfunction
 
 " Removes entries line1-line2 of the list in the window (to its end, at most)
 function! qf_tools#delete(line1, line2) abort
-  if &buftype !=# 'quickfix'
-    return
-  endif
   let l:items = s:GetList({'items': 1}).items
   if a:line1 > len(l:items)
     return
@@ -54,9 +51,6 @@ function! qf_tools#delete(line1, line2) abort
 endfunction
 
 function! qf_tools#undo() abort
-  if &buftype !=# 'quickfix'
-    return
-  endif
   let l:stack = s:UndoStack()
   if empty(l:stack)
     execute s:IsLoclist() ? 'lolder' : 'colder'
