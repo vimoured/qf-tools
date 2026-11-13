@@ -36,6 +36,10 @@ nmap yoq <Plug>(qf-tools-toggle)
 | `:QfSave[!] [name\|path\|dir/]` | Write the quickfix list to a file. With no argument, write to the file it was last saved to or loaded from, else a new one. `!` overwrites another file at that path. |
 | `:QfLoad [name\|path]` | Load a saved list as a new quickfix list; with no argument, the newest save. `<Tab>` completes names. |
 
+`:QfSave` and `:QfLoad` keep vim-place's
+[save contract](https://github.com/vimoured/vim-place#the-save-contract), with no
+deviations.
+
 In a quickfix or location list window:
 
 | Key | What it does |

@@ -1,7 +1,8 @@
 " :QfSave / :QfLoad: the quickfix list to a file and back, with its title,
 " its context and its entries' user_data, so a plugin's list works as it did.
-" They work as vim-draft's :DraftSave: a name, a path, a directory, or
-" nothing for the file the list was last saved to or loaded from.
+" They keep vim-place's save contract (its README): a name, a path, a
+" directory, or nothing for the file the list was last saved to or loaded
+" from.
 
 let s:version = 1
 
